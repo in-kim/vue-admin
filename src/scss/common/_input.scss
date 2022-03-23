@@ -1,0 +1,11 @@
+.el-input{
+    &.error > input{
+        color:#EB5757;
+        background: rgba(235, 87, 87, 0.2);
+        border: 0.8px solid rgba(235, 87, 87, 1);
+
+        &::placeholder{
+            color:#EB5757;
+        }
+    }
+}

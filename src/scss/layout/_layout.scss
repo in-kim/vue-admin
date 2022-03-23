@@ -1,0 +1,11 @@
+.el-container{
+    &.column{
+        flex-direction: column;
+        padding:20px; box-sizing:border-box
+    }
+
+    &.sub__wrapper{
+        height: calc(100% - 60px);
+        background: #757575;
+    }
+}

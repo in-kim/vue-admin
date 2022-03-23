@@ -1,0 +1,22 @@
+.sidebar-wrapper{
+    flex:0 0 300px; height:100%;
+    background-color: rgb(238, 241, 246);
+    & .logo{
+        display: flex; align-items: center; justify-content: center; gap:10px;
+        color:#fff;
+        background-color: #304155;
+
+        padding:12.5px 5px;
+
+        & > i.icon {
+            flex:0 0 35px; height:35px; 
+            background:url('/images/logo.svg') no-repeat center / cover;
+        }
+    }
+    & .el-aside{
+        height:calc(100% - 60px);
+        & .el-menu{
+            height:100%;
+        }
+    }
+}
