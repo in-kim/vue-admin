@@ -1,6 +1,4 @@
-# nyn-admin
-
-test
+# vue-admin
 
 ## Project setup
 
