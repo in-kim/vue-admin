@@ -89,7 +89,19 @@ export default {
             {
               title: "def@naver.com",
               certMailAt: "2020-09-31",
-              certYn: null,
+              certYn: '',
+              createdAt: "2020-09-20",
+            },
+            {
+              title: "ghi@naver.com",
+              certMailAt: "2020-09-31",
+              certYn: '2020-09-29',
+              createdAt: "2020-09-20",
+            },
+            {
+              title: "jkl@naver.com",
+              certMailAt: "2020-09-31",
+              certYn: '2020-09-29',
               createdAt: "2020-09-20",
             },
           ],

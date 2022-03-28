@@ -164,7 +164,7 @@ export default {
     data(){
         return{
             statusList:['READY','ACCEPTED','PARTIAL','ADD','REJECTED','CANCELED'],
-            patchParams:{
+            fetchParams:{
                 year:'',
                 annual:'',
             }
@@ -172,7 +172,7 @@ export default {
     },
     methods:{
         handleSelect(target,val){
-            this.patchParams[target] = val
+            this.fetchParams[target] = val
         },
         handleInput(target,val){
             this.$store.commit('companyManagement/DEFAULT_ASSIGN',{

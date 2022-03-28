@@ -8,7 +8,7 @@
                 <el-dropdown-item command="logout">LogOut</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
-            <span>Lee성hyun</span>
+            <span>라이언</span>
         </span>
     </el-header>
 </template>

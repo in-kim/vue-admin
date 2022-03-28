@@ -23,12 +23,13 @@ export class AuthService {
         status: 200,
       };
       let accessToken = response.data;
-
       this.setToken({
         accessToken: accessToken,
       });
 
-      $store.commit("auth/SET_TOKEN", accessToken);
+      console.log($store);
+
+      // $store.commit("auth/SET_TOKEN", accessToken);
 
       return response;
     } catch (error) {

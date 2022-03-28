@@ -20,6 +20,9 @@ export default {
         return this.$refs.searchContainer.fetchData()
       }
     },
+    mounted(){
+      this.refresh();
+    }
 }
 </script>
 

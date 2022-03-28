@@ -32,9 +32,9 @@ export default {
     handleMode(){
       this.EditMode=!this.EditMode;
     },
-    async patchData(params){
+    async fetchData(params){
       try{
-        await this.$store.dispatch('companyManagement/patchDetail',{params});
+        await this.$store.dispatch('companyManagement/fetchDetail',{params});
       }catch(error){
         console.log(error);
       }
@@ -59,7 +59,7 @@ export default {
           }
         });
         console.log('onSubmit : ',obj);
-        this.patchData(obj);
+        this.fetchData(obj);
       }else{ // 수정 리스트가 다중일 경우
         let obj = {}; // 수정된 값 배열 변수
         
@@ -76,7 +76,7 @@ export default {
               }
           });
           console.log('onSubmit : ',obj);
-          this.patchData(obj);
+          this.fetchData(obj);
           obj=[];
         });
       }

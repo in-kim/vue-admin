@@ -28,6 +28,7 @@
 
 <script>
 import Card from '@/components/Card';
+import { mapState } from 'vuex';
 export default {
     components:{Card},
     props:{
@@ -69,11 +70,12 @@ export default {
         }
     },
     computed:{
+        ...mapState(['companyManagement']),
         columns(){
-            return this.$store.state.companyManagement.ResultList
+            return this.companyManagement.ResultList
         },
         totalSize(){
-            let totalSize = Number(this.$store.state.companyManagement.ResultData.totalPages);
+            let totalSize = Number(this.companyManagement.ResultData.totalPages);
             return totalSize * 10
         }
     },
@@ -86,6 +88,9 @@ export default {
 
             this.refresh();
         },
+    },
+    mounted(){
+        this.refresh();
     }
 }
 </script>

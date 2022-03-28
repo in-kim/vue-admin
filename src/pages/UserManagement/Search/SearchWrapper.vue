@@ -5,13 +5,13 @@
                 <el-col :span="6">
                     <comm-select 
                         label="인증여부"
-                        :options="store.authOption"
+                        :options="userManagement.authOption"
                         :onChange="(val) => handleData('auth',val)"
                     />
                 </el-col>
                 <el-col :span="6">
                     <comm-input 
-                        :data="store.searchEmail" 
+                        :data="userManagement.searchEmail" 
                         placeholder="입력" 
                         label="이메일주소/ 고유번호" 
                         :onChange="(val) => handleData('searchEmail', val)"
@@ -53,6 +53,7 @@
 import Card from '@/components/Card';
 import CommInput from '@/components/CommInput.vue';
 import CommSelect from '@/components/CommSelect.vue';
+import { mapState } from 'vuex';
 export default {
     components: { Card, CommInput, CommSelect },
     data(){
@@ -62,9 +63,7 @@ export default {
         }
     },
     computed:{
-        store(){
-            return this.$store.state.userManagement; 
-        }
+        ...mapState(['userManagement'])
     },
     methods:{
         handleData(target,value){
@@ -83,6 +82,8 @@ export default {
                 joinStartDate:this.joinDt[0],
                 joinEndDate:this.joinDt[1],
             }
+
+            console.log('console.log',this.userManagement.searchEmail, this.userManagement.auth);
 
             try{
                 this.$store.commit('common/HANDLE_LODING', true);

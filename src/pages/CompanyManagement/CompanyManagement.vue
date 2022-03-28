@@ -20,8 +20,9 @@ export default {
     },
     methods:{
       handleDetail(row){
+        console.log(row);
         if(row){
-          let seq = row.baseSeq;
+          let seq = row.userSeq;
           this.getDetailData(seq);
 
           this.isDetail = !this.isDetail;

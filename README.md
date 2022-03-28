@@ -23,15 +23,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### api
-
-```
-http://61.101.106.166:8100/swagger-ui.html
-```
-
-### design
-
-```
-https://element.eleme.io/#/en-US/component/installation
-```

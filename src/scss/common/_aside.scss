@@ -2,16 +2,11 @@
     flex:0 0 300px; height:100%;
     background-color: rgb(238, 241, 246);
     & .logo{
-        display: flex; align-items: center; justify-content: center; gap:10px;
-        color:#fff;
+        font-size:30px; color:#fff; font-weight: 700;
+        text-align: center;
         background-color: #304155;
 
-        padding:12.5px 5px;
-
-        & > i.icon {
-            flex:0 0 35px; height:35px; 
-            background:url('/images/logo.svg') no-repeat center / cover;
-        }
+        padding:15px 5px;
     }
     & .el-aside{
         height:calc(100% - 60px);

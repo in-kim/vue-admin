@@ -27,6 +27,7 @@
 
 <script>
 import Card from '@/components/Card';
+import {mapMutations, mapState} from 'vuex';
 export default {
     components:{Card},
     props:{
@@ -61,11 +62,12 @@ export default {
         }
     },
     computed:{
+        ...mapState(['userManagement']),
         columns(){
-            return this.$store.state.userManagement.ResultList
+            return this.userManagement.ResultList
         },
         totalSize(){
-            let totalSize = Number(this.$store.state.userManagement.ResultData.totalPages);
+            let totalSize = Number(this.userManagement.ResultData.totalPages);
             return totalSize * 10
         }
     },
@@ -78,7 +80,7 @@ export default {
 
             this.refresh();
         },
-    }
+    },
 }
 </script>
 

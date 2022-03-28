@@ -1,9 +1,9 @@
 {
-  "name": "nyn-admin",
+  "name": "vue-admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "eslint --ext .js,.vue src"
   },
